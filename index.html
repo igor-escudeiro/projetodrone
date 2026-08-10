@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROVANT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- ===================================================== 
+ CABEÇALHO / HEADER
+  ====================================================== -->
+
+<header>
+    <nav class="cabecalho">
+        <h1>AGROVANT</h1>
+
+        <ul>
+            <li><a href="#funcoes">Funções</a></li>
+            <li><a href="#especificacao">Especificação</a></li>
+            <li><a href="#depoimentos">Depoimentos  </a></li>
+            <li><a href="#agende">Agende</a></li>
+        </ul>  
+    </nav>
+
+<!-- ===================================================== 
+ CONTEÚDO PRINCIPAL
+====================================================== -->
+
+<main>
+
+<!-- =================================================
+  SEÇÃO 1 — FUNÇÕES
+ ================================================== -->
+<section id="funcoes">
+
+    <video class="video_fundo" autoplay muted loop playsinline>
+        <source src="assets/Vídeo 1.webm" type="video/mp4">
+    </video>
+
+    <div class="overlay_video"></div>
+
+    <div class="conteiner_hero">
+        <h1>AGROVANT</h1>
+        <p class="subtitulo_hero">O drone Inteligente para silvicultura de alta performance</p>
+        <button class="btn_demonstracao">QUERO UMA DEMONSTRAÇÃO</button>
+    </div>
+
+    <div class="card_informacoes">
+        <h2>Monitore e aplique defensivos agrícolas com precisão, economia e segurança ambiental.</h2>
+
+        <div class="pilares">
+            <span>🚁 <strong>Rápido</strong></span>
+            <span>📡 <strong>Inteligente</strong></span>
+            <span>🌱 <strong>Sustentável</strong></span>
+        </div>
+
+        <p class="chamada_agendamento">👉 Agende agora uma demonstração gratuita na sua fazenda!</p>
+
+        <div class="botoes_acao">
+            <button class="btn_assistir">Assistir vídeo ▶</button>
+            <button class="btn_reportagem">Reportagem</button>
+        </div>
+    </div>
+
+</section>
+ <!-- ================================================= 
+  SEÇÃO 2 — ESPECIFICAÇÃO 
+  ================================================== -->
+
+ <section id="especificacao">
+    <div class="especificacao_conteiner">
+        <h1>especificacao</h1>
+        <p></p>
+        
+    </div>
+ </section>
+
+ <!-- ================================================= 
+  SEÇÃO 3 — DEPOIMENTOS
+  ================================================== -->
+
+  <section id="depoimentos">
+    <div class="depoimentos_conteiner">
+        <h1>serviço</h1>
+        <p></p>
+   
+    </div>
+ </section>
+
+<!-- ================================================= 
+ SEÇÃO 4 — AGENDAMENTO 
+ ================================================== -->
+ 
+  <section id="agende">
+    <div class="agende_conteiner">
+        <h1>agende</h1>
+        <p></p>
+    </div>
+ </section>
+</header>
+</main>
+
+<!-- ===================================================== 
+ RODAPÉ / FOOTER
+  ====================================================== -->
+
+<footer>
+    <p>Todos os direitos resrvados</p>
+</footer>
+
+<!-- ===================================================== 
+ BOTÃO VOLTAR AO TOPO
+ ====================================================== -->
+
+ <button id="btn-topo">↑</button>
+
+ <!-- =====================================================
+   JAVASCRIPT
+  ====================================================== -->
+
+    <script>
+        // =============================================
+        // BOTÃO "VOLTAR AO TOPO"
+        // =============================================
+
+        // Monitora o scroll da página: exibe o botão apenas quando o usuário
+        // rolou mais de 400px para baixo
+        window.addEventListener('scroll', function () {
+            var btn = document.getElementById('btn-topo');
+            btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+
+        // Ao clicar no botão, rola a página suavemente de volta ao topo
+        document.getElementById('btn-topo').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        </script>
+  </body>      
+</html>

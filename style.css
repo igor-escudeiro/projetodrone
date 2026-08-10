@@ -1,0 +1,353 @@
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+:root {
+    --cor-primaria: rgb(0, 0, 0);
+    --cor-secundaria: black;
+    --cor-button: black;
+    --font: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: var(--font);
+}
+
+
+/* =========================================================
+   CABEÇALHO / HEADER
+========================================================= */
+
+.cabecalho {
+     background-color: var(--cor-primaria); 
+    color: white;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.cabecalho h1 {
+    font-size: 30px;
+}
+
+.cabecalho ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.cabecalho a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.cabecalho a:hover {
+    color: yellow;
+}
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+main {
+    width: 100%;
+}
+
+/* =========================================================
+   SEÇÃO 1 — FUNÇÕES
+========================================================= */
+
+#funcoes {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 60px; /* Espaço para o cabeçalho se houver */
+}
+
+/* Vídeo de Fundo */
+.video_fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Camada para escurecer levemente o vídeo e destacar o texto */
+.overlay_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+/* --- BLOCO SUPERIOR (HERO) --- */
+.conteiner_hero {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 20px;
+}
+
+.conteiner_hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.subtitulo_hero {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.btn_demonstracao {
+    background-color: #00c853;
+    color: #ffffff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_demonstracao:hover {
+    background-color: #00e676;
+}
+
+/* --- BLOCO INFERIOR (ÁREA PRETA) --- */
+.card_informacoes {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.card_informacoes h2 {
+    font-size: 1.8rem;
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Linha com os ícones / pilares */
+.pilares {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.pilares span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Chamada de ação */
+.chamada_agendamento {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* Botões inferiores */
+.botoes_acao {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn_assistir {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn_assistir:hover {
+    opacity: 0.9;
+}
+
+.btn_reportagem {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_reportagem:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+/* =========================================================
+   SEÇÃO 2 — ESPECIFICAÇÃO
+========================================================= */
+
+#especificacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: blue;
+
+    height: 100vh;
+}
+
+.especificacao_conteiner {
+    text-align: center;
+}
+
+/* =========================================================
+   SEÇÃO 3 — DEPOIMENTOS
+========================================================= */
+
+#depoimentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: blueviolet;
+
+    height: 100vh;
+}
+
+.depoimentos_conteiner {
+    text-align: center;
+}
+
+
+/* =========================================================
+   SEÇÃO 4 — AGENDAMENTO
+========================================================= */
+
+#agende {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: brown;
+
+    height: 100vh;
+}
+
+.agende_conteiner {
+    text-align: center;
+}
+
+
+/* =========================================================
+   RODAPÉ / FOOTER
+========================================================= */
+
+footer {
+    background-color: chocolate;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+#btn-topo {
+    position: fixed;
+
+    bottom: 24px;
+    right: 24px;
+
+    width: 42px;
+    height: 42px;
+
+    background-color: var(--cor-button);
+
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    display: none;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn-topo:hover {
+    background-color: var(--cor-button);
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        padding: 0 20px;
+    }
+
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+
+    .cabecalho ul {
+        gap: 12px;
+    }
+
+    .cabecalho a {
+        font-size: 14px;
+    }
+
+}
