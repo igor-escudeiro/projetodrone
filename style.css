@@ -1,4 +1,3 @@
-
 /* =========================================================
    CONFIGURAÇÕES GERAIS
 ========================================================= */
@@ -8,6 +7,23 @@
     --cor-secundaria: black;
     --cor-button: black;
     --font: sans-serif;
+
+    --cor-branco: #ffffff;
+    --cor-branco-transparente: rgba(255, 255, 255, 0.15);
+    --cor-hover-link: rgb(89, 255, 0);
+    --cor-verde-acao: #00c853;
+    --cor-verde-acao-hover: #00e676;
+    --cor-verde-botao: #16b364;
+    --cor-verde-botao-hover: #119653;
+    --cor-fundo-body: #f4f4f4;
+    --cor-overlay-video: rgba(0, 0, 0, 0.35);
+    --cor-overlay-depoimentos: rgba(0, 0, 0, 0.5);
+    --cor-cinza-claro: #cccccc;
+    --cor-cinza-escuro: #1e1d1d;
+    --cor-cinza-texto: #999999;
+    --cor-cinza-label: #222222;
+    --cor-cinza-placeholder: #bbbbbb;
+    --cor-amarelo-destaque: #ffd21c;
 }
 
 * {
@@ -21,7 +37,7 @@ html {
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: var(--cor-fundo-body);
     font-family: var(--font);
 }
 
@@ -32,7 +48,7 @@ body {
 
 .cabecalho {
     background-color: var(--cor-primaria); 
-    color: white;
+    color: var(--cor-branco);
     height: 50px;
     width: 100%;
     display: flex;
@@ -56,18 +72,18 @@ body {
 }
 
 .cabecalho a {
-    color: white;
+    color: var(--cor-branco);
     text-decoration: none;
     font-size: clamp(14px, 2vw, 18px);
     transition: 0.3s;
 }
 
 .cabecalho a:hover {
-    color: rgb(89, 255, 0);
+    color: var(--cor-hover-link);
 }
 
 .botão_agende{
-    background-color:  #00c853;
+    background-color: var(--cor-verde-acao);
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -111,7 +127,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35);
+    background: var(--cor-overlay-video);
     z-index: 1;
 }
 
@@ -119,7 +135,7 @@ main {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: #ffffff;
+    color: var(--cor-branco);
     margin-top: auto;
     margin-bottom: auto;
     padding: 0 20px;
@@ -139,8 +155,8 @@ main {
 }
 
 .btn_demonstracao {
-    background-color: #00c853;
-    color: #ffffff;
+    background-color: var(--cor-verde-acao);
+    color: var(--cor-branco);
     border: none;
     padding: clamp(10px, 2vw, 14px) clamp(18px, 4vw, 28px);
     font-size: 0.9rem;
@@ -151,15 +167,15 @@ main {
 }
 
 .btn_demonstracao:hover {
-    background-color: #00e676;
+    background-color: var(--cor-verde-acao-hover);
 }
 
 .card_informacoes {
     position: relative;
     z-index: 2;
     width: 100%;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
     text-align: center;
     padding: clamp(24px, 6vw, 40px) 20px;
     box-sizing: border-box;
@@ -192,7 +208,7 @@ main {
 
 .chamada_agendamento {
     font-size: clamp(0.95rem, 2vw, 1.1rem);
-    color: #cccccc;
+    color: var(--cor-cinza-claro);
     margin-bottom: 30px;
 }
 
@@ -209,8 +225,8 @@ main {
 
 .btn_reportagem {
     background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: var(--cor-branco);
+    border: 1px solid var(--cor-branco);
     padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 24px);
     border-radius: 20px;
     font-weight: 500;
@@ -219,7 +235,7 @@ main {
 }
 
 .btn_reportagem:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--cor-branco-transparente);
 }
 /* =========================================================
    SEÇÃO 2 — ESPECIFICAÇÃO
@@ -230,7 +246,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #000000;
+    background-color: var(--cor-primaria);
     width: 100%;
     min-height: 90vh;
 
@@ -258,7 +274,7 @@ main {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: var(--cor-primaria);
 }
 
 .card_especificacoes {
@@ -267,9 +283,9 @@ main {
     min-height: clamp(100px, 15vw, 130px);
     height: auto;
     padding: 20px;
-    color: #cccccc;
-    background-color: #1e1d1d;
-    border: 1px solid #000000;
+    color: var(--cor-cinza-claro);
+    background-color: var(--cor-cinza-escuro);
+    border: 1px solid var(--cor-primaria);
 }
 
 .card_especificacoes h2 {
@@ -292,7 +308,7 @@ main {
     justify-content: space-between;
     width: 100%;
     min-height: 100vh;
-    color: white;
+    color: var(--cor-branco);
     overflow: hidden;
 }
 
@@ -319,7 +335,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--cor-overlay-depoimentos);
     z-index: 1;
 }
 
@@ -359,7 +375,7 @@ main {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--cor-branco);
 }
 
 .depoimentos_conteiner.direita {
@@ -367,7 +383,7 @@ main {
 }
 
 .depoimentos_conteiner.direita h1:first-child {
-    color: #ffd21c;
+    color: var(--cor-amarelo-destaque);
     font-size: clamp(22px, 4vw, 30px);
     letter-spacing: clamp(4px, 1vw, 10px);
     margin: 0;
@@ -393,7 +409,7 @@ SEÇÃO 4 — AGENDAMENTO
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: #000;
+    background-color: var(--cor-primaria);
     box-sizing: border-box;
 }
 
@@ -405,26 +421,26 @@ SEÇÃO 4 — AGENDAMENTO
 
 .agende_conteiner h1 {
     margin-bottom: 10px;
-    color: #ffffff;
+    color: var(--cor-branco);
     font-size: clamp(24px, 5vw, 40px);
 }
 
 .agende_conteiner h3 {
     margin-bottom: 12px;
-    color: #ffffff;
+    color: var(--cor-branco);
     font-size: clamp(18px, 3vw, 25px);
 }
 
 .agende_conteiner > p {
     margin-bottom: 25px;
-    color: #999999;
+    color: var(--cor-cinza-texto);
     font-size: clamp(14px, 2vw, 18px);
     line-height: 1.4;
 }
 
 .contato p {
     margin: 4px 0;
-    color: #999999;
+    color: var(--cor-cinza-texto);
     font-size: clamp(14px, 2vw, 18px);
 }
 
@@ -432,7 +448,7 @@ SEÇÃO 4 — AGENDAMENTO
 .agende_formulario {
     width: 38%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--cor-branco);
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -450,7 +466,7 @@ SEÇÃO 4 — AGENDAMENTO
 
 .campo label {
     margin-bottom: 4px;
-    color: #222222;
+    color: var(--cor-cinza-label);
     font-size: 15px;
 }
 
@@ -463,7 +479,7 @@ SEÇÃO 4 — AGENDAMENTO
 }
 
 .campo input::placeholder {
-    color: #bbbbbb;
+    color: var(--cor-cinza-placeholder);
 }
 
 .agende_formulario button {
@@ -471,15 +487,15 @@ SEÇÃO 4 — AGENDAMENTO
     height: clamp(38px, 5vw, 44px);
     margin-top: 2px;
     border: none;
-    background-color: #16b364;
-    color: #ffffff;
+    background-color: var(--cor-verde-botao);
+    color: var(--cor-branco);
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .agende_formulario button:hover {
-    background-color: #119653;
+    background-color: var(--cor-verde-botao-hover);
 }
 
 /* =========================================================
@@ -487,11 +503,11 @@ SEÇÃO 4 — AGENDAMENTO
 ========================================================= */
 
 footer {
-    background-color: #1e1d1d;
+    background-color: var(--cor-cinza-escuro);
 }
 .footer_texto{
     text-align: center;
-    color: #cccccc;
+    color: var(--cor-cinza-claro);
 }
 
 /* =========================================================
@@ -587,4 +603,3 @@ footer {
         font-size: 2rem;
     }
 }
-
