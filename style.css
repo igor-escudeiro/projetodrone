@@ -31,14 +31,14 @@ body {
 ========================================================= */
 
 .cabecalho {
-     background-color: var(--cor-primaria); 
+    background-color: var(--cor-primaria); 
     color: white;
     height: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 clamp(16px, 4vw, 40px);
     position: fixed;
     top: 0;
     left: 0;
@@ -46,7 +46,7 @@ body {
 }
 
 .cabecalho h1 {
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
 }
 
 .cabecalho ul {
@@ -58,12 +58,18 @@ body {
 .cabecalho a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     transition: 0.3s;
 }
 
 .cabecalho a:hover {
-    color: yellow;
+    color: rgb(89, 255, 0);
+}
+
+.botão_agende{
+    background-color:  #00c853;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 /* =========================================================
@@ -86,10 +92,9 @@ main {
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-    padding-top: 60px; /* Espaço para o cabeçalho se houver */
+    padding-top: clamp(50px, 8vw, 60px); 
 }
 
-/* Vídeo de Fundo */
 .video_fundo {
     position: absolute;
     top: 0;
@@ -100,7 +105,6 @@ main {
     z-index: 0;
 }
 
-/* Camada para escurecer levemente o vídeo e destacar o texto */
 .overlay_video {
     position: absolute;
     top: 0;
@@ -111,7 +115,6 @@ main {
     z-index: 1;
 }
 
-/* --- BLOCO SUPERIOR (HERO) --- */
 .conteiner_hero {
     position: relative;
     z-index: 2;
@@ -123,14 +126,14 @@ main {
 }
 
 .conteiner_hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
 .subtitulo_hero {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 400;
     margin-bottom: 25px;
 }
@@ -139,7 +142,7 @@ main {
     background-color: #00c853;
     color: #ffffff;
     border: none;
-    padding: 14px 28px;
+    padding: clamp(10px, 2vw, 14px) clamp(18px, 4vw, 28px);
     font-size: 0.9rem;
     font-weight: 700;
     border-radius: 6px;
@@ -151,7 +154,6 @@ main {
     background-color: #00e676;
 }
 
-/* --- BLOCO INFERIOR (ÁREA PRETA) --- */
 .card_informacoes {
     position: relative;
     z-index: 2;
@@ -159,24 +161,24 @@ main {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    padding: 40px 20px;
+    padding: clamp(24px, 6vw, 40px) 20px;
     box-sizing: border-box;
 }
 
 .card_informacoes h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     max-width: 850px;
     margin: 0 auto 25px auto;
     font-weight: 600;
     line-height: 1.4;
 }
 
-/* Linha com os ícones / pilares */
+
 .pilares {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    font-size: 1.5rem;
+    gap: clamp(16px, 4vw, 30px);
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     margin-bottom: 25px;
     flex-wrap: wrap;
 }
@@ -187,29 +189,18 @@ main {
     gap: 8px;
 }
 
-/* Chamada de ação */
+
 .chamada_agendamento {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: #cccccc;
     margin-bottom: 30px;
 }
 
-/* Botões inferiores */
+
 .botoes_acao {
     display: flex;
     justify-content: center;
     gap: 15px;
-}
-
-.btn_assistir {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 20px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.3s ease;
 }
 
 .btn_assistir:hover {
@@ -220,7 +211,7 @@ main {
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #ffffff;
-    padding: 10px 24px;
+    padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 24px);
     border-radius: 20px;
     font-weight: 500;
     cursor: pointer;
@@ -272,8 +263,9 @@ main {
 
 .card_especificacoes {
     box-sizing: border-box;
-    width: 33.3333%;
-    height: 110px;
+    width: 33.3%;
+    min-height: clamp(100px, 15vw, 130px);
+    height: auto;
     padding: 20px;
     color: #cccccc;
     background-color: #1e1d1d;
@@ -281,13 +273,12 @@ main {
 }
 
 .card_especificacoes h2 {
-    font-size: 18px;
-    margin: 0 0 5px 0;
+    font-size: clamp(15px, 2vw, 18px);
+    margin: 0 5px 0;
 }
 
-
 .card_especificacoes p {
-    font-size: 15px;
+    font-size: clamp(13px, 1.8vw, 15px);
     margin: 0;
 }
 /* =========================================================
@@ -344,12 +335,12 @@ main {
 }
 
 .depoimentos_conteiner.esquerda h1 {
-    font-size: 30px;
+    font-size: clamp(22px, 4vw, 30px);
     margin: 0 0 10px 0;
 }
 
 .depoimentos_conteiner.esquerda p {
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     line-height: 1.4;
     margin: 5px 0;
 }
@@ -357,8 +348,8 @@ main {
 .depoimentos_foto_central {
     position: relative;
     z-index: 2;
-    width: 230px;
-    height: 230px;
+    width: clamp(120px, 20vw, 230px);
+    height: clamp(120px, 20vw, 230px);
     margin: 0;
     flex-shrink: 0;
 }
@@ -377,18 +368,18 @@ main {
 
 .depoimentos_conteiner.direita h1:first-child {
     color: #ffd21c;
-    font-size: 30px;
-    letter-spacing: 10px;
+    font-size: clamp(22px, 4vw, 30px);
+    letter-spacing: clamp(4px, 1vw, 10px);
     margin: 0;
 }
 
 .depoimentos_conteiner.direita h1:nth-child(2) {
-    font-size: 30px;
+    font-size: clamp(22px, 4vw, 30px);
     margin: 2px 0;
 }
 
 .depoimentos_conteiner.direita p {
-    font-size: 20px;
+    font-size: clamp(15px, 2vw, 20px);
     margin: 0;
 }
 
@@ -415,27 +406,26 @@ SEÇÃO 4 — AGENDAMENTO
 .agende_conteiner h1 {
     margin-bottom: 10px;
     color: #ffffff;
-    font-size: 40px;
-    font-weight: 700;
+    font-size: clamp(24px, 5vw, 40px);
 }
 
 .agende_conteiner h3 {
     margin-bottom: 12px;
     color: #ffffff;
-    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
 }
 
 .agende_conteiner > p {
     margin-bottom: 25px;
     color: #999999;
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     line-height: 1.4;
 }
 
 .contato p {
     margin: 4px 0;
     color: #999999;
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
 }
 
 
@@ -443,7 +433,7 @@ SEÇÃO 4 — AGENDAMENTO
     width: 38%;
     padding: 20px;
     background-color: #ffffff;
-    border: 2px solid #8a2be2;
+    border-radius: 10px;
     box-sizing: border-box;
 }
 
@@ -466,10 +456,10 @@ SEÇÃO 4 — AGENDAMENTO
 
 .campo input {
     width: 100%;
-    height: 50px;
+    height: clamp(42px, 6vw, 50px);
     padding:  10px;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: clamp(13px, 1.5vw, 15px);
 }
 
 .campo input::placeholder {
@@ -478,7 +468,7 @@ SEÇÃO 4 — AGENDAMENTO
 
 .agende_formulario button {
     width: 100%;
-    height: 35px;
+    height: clamp(38px, 5vw, 44px);
     margin-top: 2px;
     border: none;
     background-color: #16b364;
@@ -505,33 +495,8 @@ footer {
 }
 
 /* =========================================================
-   BOTÃO VOLTAR AO TOPO
-========================================================= */
-
-#btn-topo {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 42px;
-    height: 42px;
-    background-color: var(--cor-button);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    display: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-#btn-topo:hover {
-    background-color: var(--cor-button);
-}
-
-/* =========================================================
    RESPONSIVIDADE
 ========================================================= */
-
 @media (max-width: 768px) {
     .cabecalho {
         padding: 0 20px;
@@ -546,4 +511,80 @@ footer {
         font-size: 14px;
     }
 
+    /* Seção Funções */
+    .conteiner_hero h1 {
+        font-size: 2.4rem;
+    }
+    .subtitulo_hero {
+        font-size: 1.1rem;
+    }
+    .card_informacoes h2 {
+        font-size: 1.4rem;
+    }
+    .botoes_acao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Seção Especificação */
+    .card_especificacoes {
+        width: 50%;
+        height: auto;
+        min-height: 110px;
+    }
+
+    /* Seção Depoimentos */
+    #depoimentos {
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 20px;
+        min-height: auto;
+        text-align: center;
+    }
+    .depoimentos_conteiner {
+        width: 100%;
+        text-align: center;
+    }
+    .depoimentos_conteiner.esquerda,
+    .depoimentos_conteiner.direita {
+        margin: 0;
+    }
+    .depoimentos_foto_central {
+        width: 160px;
+        height: 160px;
+        margin: 20px 0;
+    }
+
+    /* Seção Agende */
+    #agende {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    .agende_conteiner,
+    .agende_formulario {
+        width: 100%;
+    }
 }
+
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 8px;
+    }
+    #funcoes {
+        padding-top: 90px;
+    }
+
+    .card_especificacoes {
+        width: 100%;
+    }
+
+    .conteiner_hero h1 {
+        font-size: 2rem;
+    }
+}
+
