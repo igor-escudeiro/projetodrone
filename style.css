@@ -71,23 +71,27 @@ body {
     gap: 25px;
 }
 
+.menu-cabecalho{
+    display: none;
+}
+
 .cabecalho a {
     color: var(--cor-branco);
     text-decoration: none;
     font-size: clamp(14px, 2vw, 18px);
     transition: 0.3s;
 }
-
-.cabecalho a:hover {
-    color: var(--cor-hover-link);
-}
-
-.botão_agende{
+.a_agende {
     background-color: var(--cor-verde-acao);
     padding: 10px 20px;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
+.a_agende:hover {
+    background-color: var(--cor-hover-link);
+    color: var(--cor-branco);
+}
 /* =========================================================
    CONTEÚDO PRINCIPAL
 ========================================================= */
@@ -601,5 +605,10 @@ footer {
 
     .conteiner_hero h1 {
         font-size: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .cabecalho ul li:not(:last-child) {
+        display: none;
     }
 }
