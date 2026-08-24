@@ -1,18 +1,4 @@
-<!-- ===========================================================
-     COMO USAR ESTE MODELO  (apague este bloco antes de entregar)
 
-     1. Copie este arquivo para a RAIZ do seu repositório,
-        do lado do index.html, com o nome exato: README.md
-     2. Troque tudo que estiver entre colchetes [ ] pelos seus dados.
-     3. Apague as linhas de instrução como esta.
-     4. Confira no GitHub se o arquivo aparece formatado na página
-        inicial do repositório. Se aparecer o texto cru, com os
-        símbolos #, o nome do arquivo está errado.
-
-     O critério 1.3 da rubrica avalia este arquivo. Para receber
-     "Atende", ele precisa ter: seu nome, a turma, uma descrição
-     do projeto e o link da página publicada.
-     =========================================================== -->
 
 # Landing Page AGROVANT — Drone Agrícola
 
@@ -23,10 +9,10 @@ Desenvolvimento de Sistemas — SESI/SENAI Itapeva.
 
 | | |
 |---|---|
-| **Aluno** | [seu nome completo] |
-| **Turma** | [sua turma] |
+| **Aluno** | [Igor Escudeiro Gouveia] |
+| **Turma** | [2° ano B E.M.] |
 | **Professor** | Rafael Ribas |
-| **Entrega** | [dia/mês/ano] |
+| **Entrega** | [24/08/2026] |
 
 ## Sobre o projeto
 
@@ -37,37 +23,36 @@ agricultor a agendar uma demonstração do produto.
 O layout foi construído a partir de um protótipo no Figma, com HTML semântico e CSS,
 sem frameworks.
 
-> Escreva aqui, com suas palavras, o que você fez neste projeto e o que achou mais
-> difícil. Duas ou três frases bastam — não copie o texto acima.
+A principal dificuldade que eu encontrei no projeto foi ajustar as imagem no site e utilizar a teg Z-index, além disso tive dificuladades para ajustar a responsividade, apartir de medias flexiveis e da lógica utilizada no final, do site. 
 
 ## Página publicada
 
 **[cole aqui o link da sua página no ar]**
 
-<!-- Exemplo: https://seu-usuario.github.io/landing-page-drone/ -->
+<!-- https://projetodrone-seven.vercel.app/ -->
 
 ## Estrutura de pastas
 
 ```
 landing-page-drone/
-├── index.html        página principal
-├── README.md         este arquivo
-├── css/
-│   └── style.css     estilos do projeto
-└── img/              imagens e vídeos
+├── index.html      página principal
+├── README.md 
+├── style.css       este arquivo
+├── assets/
+│   └──img/         estilos do projeto
+                    imagens e vídeos
 ```
 
 ## Seções da página
 
-- [ ] Menu (cabeçalho)
-- [ ] Hero section
-- [ ] Especificações
-- [ ] Vídeo do produto
-- [ ] Cards de benefícios
-- [ ] Depoimentos
-- [ ] Formulário de contato
+- [X] Menu (cabeçalho)
+- [X] Hero section
+- [X] Especificações
+- [X] Vídeo do produto
+- [X] Cards de benefícios
+- [X] Depoimentos
+- [X] Formulário de contato
 
-<!-- Marque com um X entre os colchetes as seções que você concluiu: [x] -->
 
 ## Tecnologias e conceitos aplicados
 
@@ -84,14 +69,15 @@ media queries acrescentam o comportamento das telas maiores, a partir de **768px
 
 | Tela | Comportamento |
 |---|---|
-| Celular | [descreva: o menu some, os cards empilham...] |
-| Desktop | [descreva: o menu aparece, três cards por linha...] |
+| Celular | [descreva: O menu mantém apenas a opção Agende, os cards de especificações ficam empilhados e as seções passam a ocupar uma única coluna. O formulário e o conteúdo da seção de agendamento também ficam um abaixo do outro.] |
+
+| Desktop | [descreva: O menu completo aparece, os cards de especificações ficam organizados em três cards por linha, e as seções utilizam layouts horizontais, como o conteúdo de depoimentos e o formulário de agendamento.] |
 
 ## Como rodar localmente
 
 ```bash
-git clone [url do seu repositório]
-cd [nome da pasta]
+git clone [https://github.com/igor-escudeiro/projetodrone.git]
+cd [projetodrone]
 ```
 
 Depois é só abrir o `index.html` no navegador.
